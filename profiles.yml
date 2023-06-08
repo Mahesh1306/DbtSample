@@ -1,0 +1,13 @@
+your_profile_name:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      method: odbc
+      account: https://xrzhuzn-fi83997.snowflakecomputing.com 
+      user: Mahesh1306
+      password: Cognine7780%@
+      database: raw
+      warehouse: tranforming
+      schema: jaffle_shop
+
