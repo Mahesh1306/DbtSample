@@ -22,7 +22,8 @@ models:
             description: "The primary key for this table"
             tests:
                 - unique
-                - not_null
+                - not null
+                    
 
     - name: my_second_dbt_model
       description: "A starter dbt model"
@@ -31,13 +32,6 @@ models:
             description: "The primary key for this table"
             tests:
                 - unique
-                - not_null
+                - not null
 
-    - name: customers
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+
