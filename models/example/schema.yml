@@ -34,4 +34,13 @@ models:
                 - unique
                 - not null
 
+    - name: customers
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not null
+
 
