@@ -36,6 +36,3 @@ models:
     # Applies to all files under models/example/
     example:
       materialized: view
-
-on-run-end: 
-  "{{ execute('GETSETHEADER()')}}"
