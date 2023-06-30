@@ -26,6 +26,8 @@ LEFT JOIN Retailer R on R.storenumber=ICR.StoreID
 FULL JOIN RetailerProgram RP on RP.RetailerID=R.ID and RP.ProgramID=NPM.NationalProgramID
 WHERE ICR.RecordStatus = 'P' and ICR.SourceSystem = 'Invoca'  order by ICR.Date_Added asc)
 
+Select * from ImportData
+
 ImportDataTransform1 as (
     Select *,
     GETDATE() AS O_HEADERTIMESTAMP,
@@ -85,6 +87,9 @@ ImportDataTransform5 AS(
 Update ImportCommonRaw set ProcessedDateTime = value.O_TIMESTAMP, RecordStatus = value.O_PROCESSED
 WHERE ID = value.ID
  {% endfor %}
+
+
+ 
 
 
 
