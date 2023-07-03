@@ -1,8 +1,7 @@
-{% macro UpdatebaseTable() %}
-{%set temp = ref('ImportCommonRaw_ID') %}
-{% for row in temp.ImportDataTransform5%}
-update ImportCommonRaw set ProcessedDateTime = {{row.O_TIMESTAMP}},
+{% macro UpdatebaseTable(ImportDataTransform5) %}
+{% for row in ImportDataTransform5%}
+{{breakpoint()}}
+update ImportCommonRaw set ProcessedDateTime = GETDATE(),
 RecordStatus = {{row.O_PROCESSED}}
-where ID = row.id
 {% endfor %}
 {% endmacro %}

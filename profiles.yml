@@ -10,4 +10,5 @@ your_profile_name:
       database: raw
       warehouse: tranforming
       schema: jaffle_shop
+      debug: true
 

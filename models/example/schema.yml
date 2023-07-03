@@ -47,7 +47,11 @@ models:
       columns:
           - name: id
             description: "The primary key for this table"
-
+    - name: updatetest
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
 macros:
   - name: my_macro
   
