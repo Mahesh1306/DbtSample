@@ -1,5 +1,5 @@
 your_profile_name:
-  target: dev
+  target: development
   outputs:
     dev:
       type: snowflake

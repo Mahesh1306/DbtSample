@@ -89,5 +89,12 @@ ImportDataTransform5 AS(
     'C' AS O_PROCESSED FROM ImportDataTransform4
 )
 
-
+{{ config(materialized='ephemeral') }}
 Select * from ImportDataTransform5
+
+{{ config(
+    materialized="table",
+    post_hook="{{ UpdatebaseTable() }}"
+) }}
+
+
